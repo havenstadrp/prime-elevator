@@ -35,12 +35,12 @@ CreateThread(function()
         }, {
             options = {
                 {
-                  type = "client",
-                  action = function(entity) 
+                    type = "client",
+                    action = function(entity) 
                     TriggerEvent('prime-elevator:callLift', k)
-                  end,
-                  icon = "fas fa-chevron-circle-up",
-                  label = "Elevator",
+                    end,
+                    icon = "fas fa-chevron-circle-up",
+                    label = "Elevator",
                 },
             },
             distance = 2.5
