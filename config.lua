@@ -1,29 +1,29 @@
 Config = {}
 
-Config.UseLanguage = "en"
+Config.UseLanguage = "nl"
 Config.UseSoundEffect = true
 
 Config.Elevators = {
     ["PillBoxOne"] = {
         Group = {"police", "ambulance"}, -- Add Jobs / Gangs to be granted access to use the elevator
-        Name = "Elevator Two",
+        Name = "Diensten lift",
         Sound = "LiftSoundBellRing",
         Floors = {
             [1] = {
-                Label = "Second Floor",
-                FloorDesc = "Hospital Rooftop",
+                Label = "Tweede verdieping",
+                FloorDesc = "Toegang tot het dak",
                 Coords = vector3(338.51, -583.81, 74.16),
                 ExitHeading = "250.07"
             },
             [2] = {
-                Label = "First Floor",
-                FloorDesc = "Hospital Upper Lobby",
+                Label = "Eerste verdieping",
+                FloorDesc = "Receptie & onthaal",
                 Coords = vector3(327.02, -603.85, 43.28),
                 ExitHeading = "337.25"
             },
             [3] = {
-                Label = "Ground Floor",
-                FloorDesc = "Hospital Garage",
+                Label = "Garage",
+                FloorDesc = "Parking & Herstel",
                 Restricted = true,
                 Coords = vector3(340.18, -584.68, 28.8),
                 ExitHeading = "104.87"
@@ -31,36 +31,36 @@ Config.Elevators = {
         }
     },
     ["PillBoxTwo"] = {
-        Name = "Elevator One",
+        Name = "Lift 1",
         Sound = "LiftSoundBellRing",
         Floors = {
             [1] = {
-                Label = "First Floor",
-                FloorDesc = "Hospital Upper Lobby",
+                Label = "Eerste verdieping",
+                FloorDesc = "Receptie & onthaal",
                 Coords = vector3(330.43, -601.16, 43.28),
                 ExitHeading = "70.91"
             },
             [2] = {
-                Label = "Ground Floor",
-                FloorDesc = "Hospital Lower Lobby",
+                Label = "Garage",
+                FloorDesc = "Parking & Herstel",
                 Coords = vector3(345.62, -582.54, 28.8),
                 ExitHeading = "262.86"
             },
         }
     },
     ["PillBoxThree"] = {
-        Name = "Elevator Three",
+        Name = "Lift 2",
         Sound = "LiftSoundBellRing",
         Floors = {
             [1] = {
-                Label = "First Floor",
-                FloorDesc = "Hospital Upper Lobby",
+                Label = "Eerste verdieping",
+                FloorDesc = "Receptie & onthaal",
                 Coords = vector3(330.43, -601.16, 43.28),
                 ExitHeading = "70.91"
             },
             [2] = {
-                Label = "Ground Floor",
-                FloorDesc = "Hospital Lower Lobby",
+                Label = "Garage",
+                FloorDesc = "Parking & Herstel",
                 Coords = vector3(345.62, -582.54, 28.8),
                 ExitHeading = "262.86"
             },
@@ -68,7 +68,7 @@ Config.Elevators = {
     }
 }
 
-Config.PolyZone = false -- This will show the box zones | If set to false it will hide the box zones
+Config.PolyZone = true -- This will show the box zones | If set to false it will hide the box zones
 
 Config.WaitTime = 8000 -- This will set the time for the ProgressBar | 1000 = 1 second
 
@@ -77,8 +77,8 @@ Config.ElevatorButton = {
     ------ / Pill Box Hospital
     -- UnRestricted
     [1] = { name = "Ground Floor", location = vector3(346.10, -581.00, 28.8), width = 0.1, length = 0.3, heading = 69.47, minz = 28.9, maxz = 29.3},
-    [2] = { name = "First Floor 1", location = vector3(330.04, -602.7, 43.28), width = 0.2, length = 0.3, heading = 247.68, minz = 43.48, maxz = 43.78 },
-    [3] = { name = "First Floor 2", location = vector3(332.0317, -597.241, 43.284), width = 0.2, length = 0.3, heading = 247.68, minz = 43.48, maxz = 43.78 },
+    [2] = { name = "Eerste verdieping", location = vector3(330.04, -602.7, 43.28), width = 0.2, length = 0.3, heading = 247.68, minz = 43.48, maxz = 43.78 },
+    [3] = { name = "Garage", location = vector3(332.0317, -597.241, 43.284), width = 0.2, length = 0.3, heading = 247.68, minz = 43.48, maxz = 43.78 },
 
     -- Restricted
     [4] = { name = "EMS Garage", location = vector3(339.70, -586.20, 28.8), width = 0.1, length = 0.3, heading = 246.66, minz = 28.9, maxz = 29.3},
@@ -93,5 +93,11 @@ Config.Language = {
         Restricted = "Access Restricted!",
         CurrentFloor = "Current Floor: ",
         Unable = "You Can't Use The Elevator...",
+    },
+    ["nl"] = {
+        Waiting = "Wachten op de lift...",
+        Restricted = "Toegang beperkt!",
+        CurrentFloor = "Huidige verdieping: ",
+        Unable = "Je kunt de lift niet gebruiken...",
     },
 }
