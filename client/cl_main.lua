@@ -36,11 +36,11 @@ CreateThread(function()
             options = {
                 {
                     type = "client",
-                    action = function(entity) 
+                    action = function(entity)
                     TriggerEvent('prime-elevator:callLift', k)
                     end,
                     icon = "fas fa-chevron-circle-up",
-                    label = "Elevator",
+                    label = Config.Language[Config.UseLanguage].Elevator,
                 },
             },
             distance = 2.5
@@ -107,7 +107,7 @@ local function changeFloor(data)
         SetEntityHeading(ped, data.floor.ExitHeading)
         Wait(1000)
         DoScreenFadeIn(600)
-        
+
     end)
 end
 
